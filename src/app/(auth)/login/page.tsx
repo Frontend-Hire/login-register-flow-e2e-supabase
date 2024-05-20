@@ -14,12 +14,12 @@ export default function LoginPage() {
         <div className="flex flex-col gap-1">
           <label htmlFor="email">Email</label>
           <input id="email" name="email" type="email" required />
-          {state?.errors.email && <p>{state.errors.email}</p>}
+          <p aria-live="polite">{state?.errors.email}</p>
         </div>
         <div className="flex flex-col gap-1">
           <label htmlFor="password">Password</label>
           <input id="password" name="password" type="password" required />
-          {state?.errors.password && <p>{state.errors.password}</p>}
+          <p aria-live="polite">{state?.errors.password}</p>
         </div>
         <button className="w-full bg-black px-3 py-2 text-white">Login</button>
         <p>
